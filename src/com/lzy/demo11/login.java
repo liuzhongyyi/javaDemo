@@ -15,7 +15,7 @@ public class login {
         String passWord = scanner.next();
         while ((!("lq").equals(userName) && !("123456").equals(passWord))) {
             System.out.println("密码错误，你还有" + (MAX_COUNT - i) + "次机会");
-            i++;
+
             System.out.println("请输入用户名");
             userName = scanner.next();
             System.out.println("请输入密码");
@@ -24,7 +24,7 @@ public class login {
                 System.out.println("你没有机会");
                 break;
             }
-
+            i++;
         }
         if (i < MAX_COUNT)
             System.out.println("登录成功");
