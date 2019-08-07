@@ -13,8 +13,10 @@ public class TestArrayCopy {
         System.arraycopy(src, 1, desc, 2, 2);
         String s = Arrays.toString(desc);
         System.out.println(s);
-        boolean empty = StringUtils.isEmpty("");
+        boolean empty = StringUtils.isBlank(" ");
+        boolean empty1 = StringUtils.isEmpty(" ");
         System.out.println(empty);
+        System.out.println(empty1);
 
 
     }

@@ -10,6 +10,11 @@ public class test {
 
         Date data = new Date(10000);
         System.out.println(data);
+        fun();
+    }
+
+    public static void fun() {
+
     }
 
 }

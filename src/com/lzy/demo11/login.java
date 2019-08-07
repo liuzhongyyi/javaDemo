@@ -7,26 +7,27 @@ public class login {
     private static final int MAX_COUNT = 3;
 
     public static void main(String[] args) {
-        int i = 1;
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("请输入用户名");
-        String userName = scanner.next();
-        System.out.println("请输入密码");
-        String passWord = scanner.next();
-        while ((!("lq").equals(userName) && !("123456").equals(passWord))) {
-            System.out.println("密码错误，你还有" + (MAX_COUNT - i) + "次机会");
-
-            System.out.println("请输入用户名");
-            userName = scanner.next();
-            System.out.println("请输入密码");
-            passWord = scanner.next();
-            if (i == MAX_COUNT) {
-                System.out.println("你没有机会");
+        System.out.println("******************");
+        System.out.println("**欢迎登陆K3蓝桥系统***");
+        System.out.println("******************");
+        String a = "lq";
+        String b = "123456";
+        Scanner in = new Scanner(System.in);
+        for (int i = 3; i > 0; i--) {
+            System.out.println("请输入用户名:");
+            String c = in.next();
+            System.out.println("请输入密码:");
+            String d = in.next();
+            if (a.equals(c) && b.equals(d)) {
+                System.out.print("输入正确！");
+                System.out.print("欢迎登陆K3蓝桥系统！");
                 break;
+            } else {
+                System.out.print("输入错误！你还有" + (i - 1) + "次机会！");
             }
-            i++;
         }
-        if (i < MAX_COUNT)
-            System.out.println("登录成功");
+        in.close();
+
     }
+
 }
