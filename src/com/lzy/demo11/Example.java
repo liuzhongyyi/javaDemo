@@ -56,6 +56,7 @@ public class Example {
         Scanner scanner = new Scanner(System.in);
         value = scanner.nextInt();
         return value;
+
     }
 
 }

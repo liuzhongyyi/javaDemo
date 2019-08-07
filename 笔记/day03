@@ -1,0 +1,10 @@
+日期的格式：
+yyyy 年
+MM ：月
+dd ： 日
+hh ：12小时制
+HH ：表示24小时制
+mm ： 表示分钟
+ss ： 表示秒
+SSS ： 表示毫秒
+yyyy-MM-dd hh:mm:ss SSS
