@@ -6,3 +6,15 @@ BigDecimal.Round_Half_Down
        System.out.println(decimal.doubleValue()); // -->3.136
        BigDecimal scale = decimal.setScale(2, BigDecimal.ROUND_HALF_DOWN);
        System.out.println(scale.doubleValue()); // 产生新对象对新对象有效 -->3.14
+
+
+
+数字格式
+0 : 表示一个数字(格式比实际位数少,四舍五入，实际位数多0填充) eg： 格式：0.00 数据 :13.145 ->13.45
+# ： 表示一个数字(位数不足不会填0，实际位数多不变，实际位数少四舍五入)
+% ： 乘以100并显示为百分比
+？： 乘以1000并显示为千分比
+. ： 表示小数位
+，：表示分组的分隔符
+；分割格式
+- 符号前缀
