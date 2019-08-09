@@ -1,0 +1,3 @@
+BigInteger
+biginteger.remainder()//取余
+biginteger.divdeAndRemainder 出发和取余

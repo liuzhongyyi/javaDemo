@@ -1,0 +1,7 @@
+1生成的范围在[0,n)
+random.nextLnt(n+1)
+[M,N]
+random.nextInt(n-m+1)+m
+(m,n)
+random.nextInt(n-m-1)+m+1
+
