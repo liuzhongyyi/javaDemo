@@ -1,0 +1,8 @@
+## 如果被舍弃的部分》0.5 则舍入行为同up 否侧舍入行为同为down
+BigDecimal.Round_Half_Down
+## doubleVaule()获取格式化的结果
+
+       BigDecimal decimal = new BigDecimal(3.136);
+       System.out.println(decimal.doubleValue()); // -->3.136
+       BigDecimal scale = decimal.setScale(2, BigDecimal.ROUND_HALF_DOWN);
+       System.out.println(scale.doubleValue()); // 产生新对象对新对象有效 -->3.14
