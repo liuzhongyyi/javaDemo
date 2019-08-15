@@ -3,6 +3,8 @@ package com.lzy.demo17;
 import java.util.*;
 
 public class randomNum {
+    private static final String CODE = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    private static Random random = new Random();
 
     public static void main(String[] args) {
 //        int needNum = 20;
@@ -21,20 +23,23 @@ public class randomNum {
 //        }
 //        System.out.println(list.size());
 //        System.out.println(list);
-        ArrayList list1 = new ArrayList();
-        ArrayList list2 = new ArrayList();
-        list1.add('a');
-        list1.add('b');
-        list1.add('c');
-        list1.add('d');
-        list1.add('e');
-        list2.add('c');
-        list2.add('e');
-        list2.add('d');
-        list2.add('g');
-        list2.add('h');
-        Collection collection = mergeCollections(list1, list2);
-        System.out.println(collection);
+//
+//
+//        ArrayList list1 = new ArrayList();
+//        ArrayList list2 = new ArrayList();
+//        list1.add('a');
+//        list1.add('b');
+//        list1.add('c');
+//        list1.add('d');
+//        list1.add('e');
+//        list2.add('c');
+//        list2.add('e');
+//        list2.add('d');
+//        list2.add('g');
+//        list2.add('h');
+//        Collection collection = mergeCollections(list1, list2);
+//        System.out.println(collection);
+        System.out.println(13);
 
 
     }
@@ -57,5 +62,32 @@ public class randomNum {
         c1.addAll(temp2);
         return c1;
 
+    }
+
+    static void getNum() {
+        int needNum = 9;
+        int currentNum = 0;
+        Random random = new Random();
+        List<Integer> list = new ArrayList<>();
+        while (currentNum < needNum) {
+            //random.nextInt(n-m+1)+m 1-99
+            int value = random.nextInt(50) + 1;
+            if (!list.contains(value)) {
+                list.add(value);
+                currentNum++;
+            }
+        }
+        System.out.println(list.size());
+        System.out.println(list);
+    }
+
+    static void code() {
+        List list = new ArrayList();
+        for (int i = 0; i < 4; i++) {
+            int anInt = random.nextInt(62);
+            list.add(CODE.charAt(anInt));
+
+        }
+        System.out.println(list);
     }
 }
