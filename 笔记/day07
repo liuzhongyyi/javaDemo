@@ -1,0 +1,6 @@
+在window下流中换行需要/r/n
+在linux下换行需要/n
+mac 系统 /r
+换行存在跨平台问题 字符缓冲流Bufferedbuffer 有newLine方法可以实现
+
+字节流操作文件不关闭close方法也能输出二字符流需要关闭否则不能输出
