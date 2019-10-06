@@ -13,7 +13,7 @@
             <entry key="com.zeroturnaround.jrebel.remoting.DeleteUnindexedFiles" value="false" />
             <entry key="com.zeroturnaround.jrebel.remoting.ModuleRemoteServerSelection" value="off" />
             <entry key="jrebelEnabled" value="true" />
-            <entry key="lastExternalPluginCheckTime" value="1565333817747" />
+            <entry key="lastExternalPluginCheckTime" value="1568968919507" />
           </map>
         </option>
         <option name="masterModuleName" />
@@ -46,5 +46,6 @@
     <orderEntry type="library" name="commons-logging-1.2" level="project" />
     <orderEntry type="library" name="commons-pool2-2.7.0" level="project" />
     <orderEntry type="library" name="mysql-connector-java-5.1.21" level="project" />
+    <orderEntry type="library" name="druid-1.0.9" level="project" />
   </component>
 </module>

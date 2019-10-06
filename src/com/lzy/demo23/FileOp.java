@@ -1,10 +1,14 @@
 package com.lzy.demo23;
 
 import com.alibaba.druid.pool.DruidDataSource;
+import com.alibaba.druid.pool.DruidDataSourceFactory;
+import com.alibaba.druid.pool.DruidPooledConnection;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.ResultSetHandler;
 
+import javax.sql.DataSource;
 import java.io.*;
+import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Arrays;
 import java.util.Calendar;
@@ -13,7 +17,7 @@ import java.util.Random;
 import java.util.stream.IntStream;
 
 public class FileOp {
-    public static void main(String[] args) throws SQLException, IOException {
+    public static void main(String[] args) throws Exception {
         ClassLoader classLoader = FileOp.class.getClassLoader();
 
 
@@ -21,16 +25,26 @@ public class FileOp {
         Properties properties = new Properties();
         properties.load(resourceAsStream);
 
-        DruidDataSource druidDataSource = new DruidDataSource();
-        druidDataSource.setConnectProperties(properties);
+        DataSource dataSource = DruidDataSourceFactory.createDataSource(properties);
+//        DataSource dataSource = new DruidDataSource();
+//        ((DruidDataSource) dataSource).setConnectProperties(properties);
+        Connection connection = dataSource.getConnection();
+        System.out.println(connection);
+//
+//        druidDataSource.setConnectProperties(properties);
+//        String properties1 = druidDataSource.getProperties();
+//        System.out.println(properties1);
+//        String url = druidDataSource.getUrl();
+//        System.out.println(url);
 //        druidDataSource.setPassword("123456");
 //        druidDataSource.setUsername("root");
 //        druidDataSource.setUrl("jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8");
 //        druidDataSource.setDriverClassName("com.mysql.jdbc.Driver");
 
-        QueryRunner queryRunner = new QueryRunner(druidDataSource);
-
-        System.out.println(queryRunner);
+//        QueryRunner queryRunner = new QueryRunner(druidDataSource);
+//
+//        System.out.println(queryRunner);
+//        System.out.println(druidDataSource);
 
 //        File file = new File("G://Ñ§Ï°±Ê¼Ç");
 //        boolean exists = file.exists();
